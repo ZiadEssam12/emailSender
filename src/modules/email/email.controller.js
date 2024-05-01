@@ -13,7 +13,7 @@ export const sendEmail = asyncHandler(async (req, res, next) => {
     to: req.body.to,
     from: "lrtadj0@gmail.com", // Change to your verified sender
     subject: req.body.subject,
-    text: "and easy to do anywhere, even with Node.js",
+    text: req.body.text,
   };
   sgMail
     .send(msg)
